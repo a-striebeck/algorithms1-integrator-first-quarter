@@ -1,0 +1,30 @@
+Deberemos generar una Aplicación que permita:
+
+1. Gestionar la Lista de Invitados, la misma deberá contener los Datos Personales de los
+mismos.
+2. Además deberemos saber si confirmo o no la asistencia a la Fiesta.
+3. El sistema podrá agregar, borrar o cambiar datos personales.
+4. Realizar un listado de asistentes por pantalla
+5. Que Permita confirmar o cancelar la Asistencia buscando por nro de Ticket.
+
+Se requiere implementar Archivos
+Estructuras de Datos, estructuras de Control.
+La salida será por consola y deberá persistir en un archivo los
+datos.
+
+Estuctura: Lista de invitados:
+
+string nombre
+int nro de entrada
+bool asistencia
+
+menu()
+agregar nuevo invitado()
+borrar invitado()
+editar datos de invitado()
+listar invitados()
+confirmar asistencia()
+cancelar asistencia()
+
+programa()
+ejecutar menu()
