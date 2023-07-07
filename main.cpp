@@ -41,6 +41,7 @@ void menu()
     int i = 1;
     int sentedInvitations = 0;
     int choice = 0;
+    int guestDNI = 0;
     guests Guests;
     
 
@@ -76,35 +77,31 @@ void menu()
         }
         case 2:
         {
-            int guestDNIEdit;
             cout << "Ingrese el DNI del invitado a editar: ";
-            cin >> guestDNIEdit;
-            editGuest(Guests, guestDNIEdit, sentedInvitations);
+            cin >> guestDNI;
+            editGuest(Guests, guestDNI, sentedInvitations);
             
             break;
         }
         case 3:
         {
-            int guestDNIDelete;
             cout << "Ingrese el DNI del invitado a borrar: ";
-            cin >> guestDNIDelete;
-            deleteGuest(Guests, guestDNIDelete, sentedInvitations);
+            cin >> guestDNI;
+            deleteGuest(Guests, guestDNI, sentedInvitations);
             break;
         }
         case 4:
         {
-            int guestDNICheck;
             cout << "Ingrese el DNI para saber si ha confirmado la asistencia: ";
-            cin >> guestDNICheck;
-            isComing(Guests, guestDNICheck, sentedInvitations);
+            cin >> guestDNI;
+            isComing(Guests, guestDNI, sentedInvitations);
             break;
         }
         case 5:
         {
-            int guestDNIAttendance;
             cout << "Ingrese el DNI para editar asistencia: ";
-            cin >> guestDNIAttendance;
-            editAttendance(Guests, guestDNIAttendance, sentedInvitations);
+            cin >> guestDNI;
+            editAttendance(Guests, guestDNI, sentedInvitations);
             break;
         }
         case 6:
@@ -133,8 +130,9 @@ guest addGuests(int tTicketNumber)
 {
 
     guest tGuest;
+
     cout << "Ingrese nombre del invitado: ";
-    cin.ignore();
+    cin.ignore(); // limpia el buffer
     getline(cin, tGuest.guestName);
     cout << "\n Ingrese DNI del invitado: ";
     cin >> tGuest.dni;
